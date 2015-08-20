@@ -1,3 +1,7 @@
 create database freshnews;
 use freshnews;
-create table user(_id varchar(100) primary key,username varchar(20),password varchar(20));
+create table user(
+	id int PRIMARY KEY AUTO_INCREMENT,
+	username varchar(20) not null,
+	nickname varchar(20) default null,
+	password varchar(20) not null);
