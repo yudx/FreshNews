@@ -53,6 +53,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	
     </script> -->
     
+    <script language="text/javascript">
+        function test(p) {
+            var url = "app://zhuoyimarket";
+            $.ajax({
+                type: "GET",
+                cache: false,
+                url: "app://zhuoyimarket",
+                data: "",
+                success: function() {
+                    p.href = "app://zhuoyimarket";
+                },
+                error: function() {
+                }
+            });
+        }
+
+    </script>
+    
     <fieldset>
     	<legend>登录</legend>
     	<div class="login_span">
@@ -65,6 +83,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" id="password"/>
     	
     </fieldset>
+    
+    <a href="javascript:void(0);" onclick="test(this);">This is a link</a>
     
   </body>
 </html>
